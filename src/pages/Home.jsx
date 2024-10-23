@@ -31,9 +31,9 @@ function Home() {
             <Nav handleShow={handleShow} />
             <Cart handleClose={handleClose} show={show} />
             <Container>
-                <Row className='py-5 row-gap-4'>
+                <Row className='py-5 row-gap-4 '>
                     {data?.map((item, index) => (
-                        <Col key={index} md={4} lg={3}>
+                        <Col key={index} md={4} lg={3} className='d-flex justify-content-center'>
                             <Productcards
                                 title={item.title}
                                 description={item.description}
