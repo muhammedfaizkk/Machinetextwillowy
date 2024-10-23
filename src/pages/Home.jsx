@@ -5,6 +5,7 @@ import axios from 'axios';
 import Productcards from '../components/Productcards';
 import { Col, Container, Row } from 'react-bootstrap';
 
+
 function Home() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -16,7 +17,7 @@ function Home() {
     }, [])
 
     const fetchProducts = () => {
-        const res = axios.get('./products.json')
+        axios.get('./products.json')
             .then((res) => {
                 setData(res.data)
             })
@@ -28,7 +29,10 @@ function Home() {
 
     return (
         <div>
-            <Nav handleShow={handleShow} />
+            
+            <Nav handleShow={handleShow} 
+             data={data}
+            />
             <Cart handleClose={handleClose} show={show} />
             <Container>
                 <Row className='py-5 row-gap-4 '>
@@ -40,7 +44,9 @@ function Home() {
                                 price={item.price}
                                 image={item.image}
                                 item={item}
-                                
+                                id={item.id}
+                                qty={item.qty}
+
                             />
                         </Col>
                     ))}

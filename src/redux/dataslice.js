@@ -1,4 +1,3 @@
-// redux/dataslice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -13,7 +12,7 @@ const Cart = createSlice({
             state.Mycartdata = [...state.Mycartdata, action.payload];
         },
         updateQty: (state, action) => {
-            const { quantity, id } = action.payload
+            const {quantity, id } = action.payload
             const item = state.Mycartdata.find((item) => item.id === id)
             if (item) {
                 item.qty = quantity;

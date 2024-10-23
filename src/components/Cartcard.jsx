@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { deleteItemFromCart, updateQty } from '../redux/dataslice';
 
-function Cartcard({ id, title, price, image,qty}) {
+function Cartcard({ id, title, price, image, qty }) {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch()
 
@@ -28,7 +28,6 @@ function Cartcard({ id, title, price, image,qty}) {
     dispatch(deleteItemFromCart(id))
   };
 
-  const total = price * quantity;
 
 
 
@@ -51,7 +50,7 @@ function Cartcard({ id, title, price, image,qty}) {
             </div>
           </Card.Text>
           <Card.Text className="text-center d-flex flex-column align-items-center justify-content-center">
-            <h5>{total} INR</h5>
+            <h5>{qty * price} INR</h5>
             <FaTrashAlt style={{ cursor: 'pointer' }} className="text-danger" onClick={handleDelete} />
           </Card.Text>
         </Card.Body>

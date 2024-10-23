@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button, Modal, Col, Row } from 'react-bootstrap';
+import {Modal, Col, Row } from 'react-bootstrap';
 import Cartcard from './Cartcard';
 import { useSelector } from 'react-redux';
 
@@ -28,6 +28,13 @@ function Cart({ handleClose, show }) {
             ))}
           </Row>
         </Modal.Body>
+        <Modal.Footer>
+          <h5>Total:
+            <span className="ms-2">
+              ₹{selector.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)}
+            </span>
+          </h5>
+        </Modal.Footer>
       </Modal>
     </>
   );
