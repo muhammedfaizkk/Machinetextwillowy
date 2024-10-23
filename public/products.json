@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Urban Nomad Tee",
+    "description": "A relaxed fit tee with minimalistic designs, perfect for the modern city adventurer",
+    "price": 1200,
+    "image": "products/product-01.webp",
+    "qty": 1
+  },
+  {
+    "id": 2,
+    "title": "Zen Element Tee",
+    "description": "A throwback-inspired tee featuring vintage graphics, blending nostalgia with contem",
+    "price": 2500,
+    "image": "products/product-02.webp",
+    "qty": 1
+  },
+  {
+    "id": 3,
+    "title": "Zen Element Tee",
+    "description": "A vintage-style faucet with a classic brass finish, perfect for antique-themed bathroom decor.",
+    "price": 3200,
+    "image": "products/product-03.webp",
+    "qty": 1
+  },
+  {
+    "id": 4,
+    "title": "Wanderlust Explorer Tee",
+    "description": "This handheld shower head comes with multiple massage settings, providing a spa-like experience.",
+    "price": 1800,
+    "image": "products/product-04.png",
+    "qty": 1
+  }
+]
